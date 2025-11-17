@@ -1,0 +1,219 @@
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Variabile pentru teme*/
+:root{
+  --bg:#0f172a;        /* fundal dark */
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#60a5fa;
+}
+html[data-theme="light"]{
+  --bg:#f8fafc;        /* fundal light */
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --accent:#2563eb;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Reset minim + bază*/
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{max-width:1100px; margin:28px auto; padding:0 18px}
+h1{margin:16px 0}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Header + Nav*/
+.site-header{
+  position:sticky; top:0;
+  backdrop-filter:blur(6px);
+  background:rgba(0,0,0,.3);
+  border-bottom:1px solid #1f2937;
+}
+.nav{
+  max-width:1100px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 18px;
+}
+.brand{font-weight:700; color:var(--text); text-decoration:none}
+.menu{list-style:none; display:flex; gap:16px; margin:0; padding:0; align-items:center}
+.menu a{color:var(--text); text-decoration:none}
+.menu a:hover{color:var(--accent)}
+.btn{
+  border:1px solid #374151; background:transparent; color:var(--text);
+  padding:8px 12px; border-radius:10px; cursor:pointer
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Dropdown Temă*/
+.theme-menu{ position:relative; }
+.dropdown{
+  position:absolute; top:110%; right:0;
+  background:var(--card);
+  border:1px solid #1f2937; border-radius:10px;
+  padding:6px; margin:0; list-style:none; min-width:160px;
+  display:none; box-shadow:0 10px 30px rgba(0,0,0,.35); z-index:999;
+}
+.dropdown.open{ display:block; }
+.dropdown-item{
+  width:100%; text-align:left; border:0; background:transparent;
+  color:var(--text); padding:8px 10px; border-radius:8px; cursor:pointer;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.dropdown-item:hover{ background:rgba(255,255,255,.06); }
+.dropdown-item .check{ opacity:0; }
+.dropdown-item.active .check{ opacity:1; }
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Poza Profil*/
+.poza-profil {
+  height: 50vh;             /* face containerul cât ecranul */
+  display: flex;            /* activează flexbox */
+  justify-content: center;  /* centrează pe orizontală */
+  align-items: center;      /* centrează pe verticală */
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------h1-h2 Titlu-Subtitlu*/
+h1 {
+  margin-top: 1.5rem;   /* spațiu față de poză */
+  font-size: 2rem;
+  text-align: center;
+}
+.subtitlu {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Scroll usor*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sectiunea Despre*/
+section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+#about h2 { margin-bottom: 30px;
+            text-align: center;}
+#about p  { padding-left: 2rem;
+            margin: 3px; 
+            text-align: center;
+            font-size: 1.1rem;}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------Poza intre subtitlu si despre mine*/
+.banner-cod {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+}
+
+.banner-cod img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sectiunea Proiecte*/
+#projects h2 { margin-bottom: 30px;
+            text-align: center;}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Tabs*/
+.tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 16px 0 28px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.tab:hover { background: rgba(96,165,250,0.15); }
+.tab.is-active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.tab-panels {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+  text-align: center;
+}
+.tab-panel img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  margin-bottom: 12px;
+}
+.tab-panel h3 { margin: 8px 0 6px; }
+.tab-panel .stack { color: var(--muted); font-size: .95rem; }
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------ascundere „soft” pentru panouri inactive (JS setează și hidden)*/
+.tab-panel { display: block; }
+.tab-panel[hidden] { display: none; }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------Buton Quote Generator + Text apasa pe buton*/
+.quote-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 8px;
+  text-align: center;
+}
+#quoteText {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+#quoteBtn {
+  padding: 8px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background .2s;
+}
+#quoteBtn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Cronometru*/
+.timer-box {
+  margin-top: 16px; padding: 20px; max-width: 520px; margin-left: auto; margin-right: auto;
+  background: var(--card); border: 1px solid #1f2937; border-radius: 12px; text-align: center;
+}
+.time-display {
+  font-variant-numeric: tabular-nums; letter-spacing: 1px;
+  font-size: 3rem; font-weight: 700; margin-bottom: 12px;
+}
+.timer-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 8px; }
+.timer-form input {
+  width: 90px; padding: 8px 12px; border: 1px solid #1f2937; border-radius: 8px;
+  background: var(--bg); color: var(--text); text-align: center;
+}
+.btn.ghost { border-color: #374151; }
+.btn.ghost:hover { background: rgba(255,255,255,.06); }
+.timer-presets { display: flex; gap: 8px; justify-content: center; margin-top: 8px; }
+.timer-msg { margin-top: 10px; color: var(--muted); min-height: 1.2em; }
+
+/* ascunde vizual, dar păstrează pentru screen-readers */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

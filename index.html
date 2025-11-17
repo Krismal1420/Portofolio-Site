@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tamaș Mălin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#">Mălinelu'</a>
+      <ul class="menu">
+        <li><a href="#about">Despre</a></li>
+        <li><a href="#projects">Proiecte</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Tema-->
+        <li class="theme-menu">
+          <button id="themeMenuBtn" class="btn" aria-haspopup="true" aria-expanded="false">
+            🌙 ▾
+          </button>
+          <ul id="themeDropdown" class="dropdown" role="menu">
+            <li role="menuitem">
+              <button class="dropdown-item" data-theme="light">
+                Light <span class="check">✓</span>
+              </button>
+            </li>
+            <li role="menuitem">
+              <button class="dropdown-item" data-theme="dark">
+                Dark <span class="check">✓</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+ <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Imaginea mea de profil-->
+<div class="poza-profil">
+  <img src="Poze/portret.png" alt="Malinelu">
+</div>
+
+  <main class="container">
+    <h1>Salut! Sunt Malin, soon to be front-end developer.</h1>
+    <h2 class="subtitlu">(Încă învăț să nu mai sparg CSS-ul)</h2>
+  </main>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------Poza umplere Subtitlu - Despre Mine-->
+ <div class="banner-cod">
+  <img src="Poze/HTML-Umplere1.jpg" alt="Fragment de cod pe ecran">
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sectiunea despre mine-->
+<section id="about" class="sectiune">
+  <h2>Despre mine</h2>
+  <p>Salut, sunt <strong>Malin</strong>, actual <strong>inginer de sisteme embedded</strong> care s-a hotărât să mute șuruburile din plăci pe pixeli în browser.<br>
+  La <strong>27 de ani</strong> am realizat că <em>„joaca de copii”</em> pe care o consideram programarea la bac e, de fapt, destul de serioasă… și chiar <strong>fun</strong>
+  (când merge totul ca uns și nu-ți vine să te urci pe pereți).<br>
+  Învăț singur <strong>front-end</strong> și încerc să demonstrez că poți construi interfețe curate fără să faci <strong>CSS-ul</strong> să plângă.
+</p>
+<p>
+  Acum hai să-ți povestesc câteva chestii simpatice despre mine: când nu mă lupt cu <strong>div-uri</strong>, probabil încerc să gătesc ceva decent,
+  repar chestii până le stric de tot, colecționez <strong>meme-uri</strong> mai repede decât linii de cod și am <strong>două pisici</strong>
+  care sunt convinse că sunt <em>senior front-end developer</em>.<br><br>
+</p>
+  <p>Dacă ai citit până aici, felicitări — ai trecut și tu testul meu de <strong><em>endurance</strong></em>.</p><br><br><br>
+</section>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sectiunea proiecte-->
+<section id="projects" class="sectiune">
+  <h2>Proiecte</h2>
+  <!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Butoane tab-->
+  <div class="tabs" role="tablist" aria-label="Proiecte">
+    <button class="tab is-active" role="tab" aria-selected="true" aria-controls="proj1" id="tab-proj1">
+      Proiect 1
+    </button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="proj2" id="tab-proj2">
+      Proiect 2
+    </button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="proj3" id="tab-proj3">
+      Proiect 3
+    </button>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Tab Proiect 1-->
+  <div class="tab-panels">
+    <article id="proj1" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-proj1">
+      <h3>Portofoliu personal</h3>
+      <p><strong>Primul meu proiect:</strong> HTML + CSS + un strop de JS. Interfață simplă, focus pe lizibilitate și structură.<br>
+Aici am descoperit că un <em>buton</em> poate aduce bucurie… și nervi în același timp. <span class="hashtag">#PrimaMeaCrizăDeCSS</span></p>
+      <img src="Poze/portofoliu-ss.png" alt="Screenshot site portofoliu">
+      <p>Și totuși, n-am abandonat <em>(nu ca atunci când promit că mai văd un singur episod și se face 3 dimineața)</em>. Am luat-o de la capăt, am tras aer în piept și am reușit să construiesc primul meu site — exact pe cel pe care îl răsfoiești acum.<br> 
+       <strong>Mulțumesc</strong> că ai ajuns până aici și că mi-ai dat câteva minute din timpul tău… promite-mi doar că nu vei judeca prea aspru <strong>div-urile</strong> mele.</p>
+
+        <img src="Poze/portofoliu-ss2.png" alt="Screenshot site portofoliu">
+      <p class="stack">Stack: HTML · CSS · JS</p>
+    </article>
+
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Tab Proiect 2-->
+    <article id="proj2" class="tab-panel" role="tabpanel" aria-labelledby="tab-proj2" hidden>
+      <h3>Quote Generator</h3>
+      <p>Un mic proiect unde am lăsat <em>JavaScript-ul</em> să fie DJ-ul propriilor mele replici. Fiecare click pe buton scoate o nouă doză de înțelepciune (sau sarcasm) dintr-o listă atent aleasă de… mine. Perfect pentru zilele în care vrei un motiv să râzi sau să amâni un bug.</p>
+      
+      <div class="quote-box">
+    <blockquote id="quoteText">Apasă pe buton pentru a-ți primi citatul foarte atent ales.</blockquote>
+    <button id="quoteBtn" class="btn">Generează citat</button>
+     <p class="stack">Stack: HTML · CSS · JS</p>
+  </div>
+</article>
+
+    </article>
+
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Tab Proiect 3-->
+      <article id="proj3" class="tab-panel" role="tabpanel" aria-labelledby="tab-proj3" hidden>
+      <h3>Cronometru (mini-Pomodoro)</h3>
+  <p>Un cronometru cinstit: setezi minutele, pornești, pui pauză, resetezi. Fără magie, doar timp care se scurge.</p>
+  <div class="timer-box">
+    <div class="time-display" id="tDisplay">25:00</div>
+
+    <form id="tForm" class="timer-form" autocomplete="off">
+      <label for="tMinutes" class="sr-only">Minute</label>
+      <input id="tMinutes" type="number" min="1" max="180" value="25" />
+      <button type="button" id="tStart" class="btn">Start</button>
+      <button type="button" id="tPause" class="btn">Pauză</button>
+      <button type="button" id="tReset" class="btn">Reset</button>
+    </form>
+
+    <div class="timer-presets">
+      <button type="button" data-min="5"  class="btn ghost">5m</button>
+      <button type="button" data-min="15" class="btn ghost">15m</button>
+      <button type="button" data-min="25" class="btn ghost">25m</button>
+    </div>
+
+    <div id="tMsg" class="timer-msg" aria-live="polite"></div>
+    <p class="stack">Stack: HTML · CSS · JS</p>
+  </div>
+</article>
+
+  <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Scriptul la final-->
+
+  <section id="contact" class="sectiune" style="margin-top:100px;">
+  <h2>Contact</h2>
+  <p>Dacă ai nevoie de un front-end developer care învață repede, muncește serios și glumește moderat, sunt aici.</p>
+  <p>Promit că la interviu vin cu CV-ul, nu cu o listă de scuze pentru CSS.</p>
+</section>
+<div class="contact-grid">
+    <div class="contact-item">
+      <h3>Email</h3>
+      <a href="mailto:malin.tamas.dev@gmail.com">malin.tamas@yahoo.com</a>
+    </div>
+
+    <div class="contact-item">
+      <h3>LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/malin-tamas-328208234" target="_blank">
+        Malin Tamas
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <h3>GitHub</h3>
+      <a href="https://github.com/midnightphase" target="_blank">
+        github.com/midnightphase
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <h3>Telefon</h3>
+      <a href="tel:+40700000000">+40 785 570 023</a>
+    </div>
+  </div>
+</section>
+
+  <script src="app.js"></script>
+</body>
+</html>
