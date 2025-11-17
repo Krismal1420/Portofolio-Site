@@ -173,9 +173,7 @@ section h2 {
 .quote-box {
   margin-top: 20px;
   padding: 20px;
-  background: var(--card);
-  border-radius: 8px;
-  text-align: center;
+  background: var(--card); border: 1px solid #033479; border-radius: 12px; text-align: center;
 }
 #quoteText {
   font-size: 1.2rem;
@@ -199,7 +197,7 @@ section h2 {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Cronometru*/
 .timer-box {
   margin-top: 16px; padding: 20px; max-width: 520px; margin-left: auto; margin-right: auto;
-  background: var(--card); border: 1px solid #1f2937; border-radius: 12px; text-align: center;
+  background: var(--card); border: 1px solid #04449e; border-radius: 12px; text-align: center;
 }
 .time-display {
   font-variant-numeric: tabular-nums; letter-spacing: 1px;
@@ -217,3 +215,49 @@ section h2 {
 
 /* ascunde vizual, dar păstrează pentru screen-readers */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Iconite Contact*/
+
+.contact-row {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap; /* ca să nu explodeze pe mobile */
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color .2s, transform .2s;
+}
+
+.contact-item:hover {
+  color: var(--accent);
+  transform: scale(1.07);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.sep {
+  color: var(--muted);
+  font-size: 1.2rem;
+  user-select: none;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------spatiere Dupa iconite*/
+
+.legal {
+  margin-top: 40px;
+  font-size: 0.85rem;   /* mai mic */
+  font-style: italic;   /* înclinat puțin */
+  color: var(--muted);  /* mai discret */
+}
